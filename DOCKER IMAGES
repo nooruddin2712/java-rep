@@ -37,7 +37,12 @@
             </tr>
         </tbody>
     </table>
-</center>ARG NGINX_VERSION=latest
+</center>
+</body>
+</html>
+
+DOCKERFILE:
+ARG NGINX_VERSION=latest
 FROM nginx:${NGINX_VERSION}
 ADD index.html /usr/share/nginx/html/index.html
 WORKDIR ["nginx","-g","daemon off;"]
@@ -45,5 +50,4 @@ EXPOSE 80
 LABEL description="krishna"
 ENV APP_VERSION=1.0
 
-</body>
-DOCKERFILE:
+
